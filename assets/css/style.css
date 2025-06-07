@@ -1,0 +1,38 @@
+/* Google Fonts - Inter を読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; /* 薄いブルーグレーの背景色 */
+    color: #334155; /* 濃いテキスト色 */
+}
+
+/* スワイパーのラッパー要素（スライドが格納される場所） */
+.swiper-wrapper {
+    /* スワイプ時のスムーズなトランジション（移動効果）を保証 */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 各スライドの要素 */
+.swiper-slide {
+    /* スライドがコンテナの幅を維持するように設定 (重要) */
+    flex-shrink: 0;
+    width: 100%; /* 各スライドはコンテナの全幅を占める */
+    scroll-snap-align: start; /* CSS Scroll Snapのフォールバック/強化用 */
+}
+
+/* ページネーションドットのスタイル */
+.swiper-pagination .dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #cbd5e1; /* 非アクティブなドットの色 (ライトグレー) */
+    border-radius: 50%; /* 円形にする */
+    cursor: pointer; /* マウスオーバー時にポインターを表示 */
+    transition: background-color 0.3s ease; /* 色変更時のトランジション */
+}
+
+/* アクティブなドットのスタイル */
+.swiper-pagination .dot.active {
+    background-color: #3b82f6; /* アクティブなドットの色 (ブルー) */
+}
