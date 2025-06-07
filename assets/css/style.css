@@ -36,3 +36,8 @@ body {
 .swiper-pagination .dot.active {
     background-color: #3b82f6; /* アクティブなドットの色 (ブルー) */
 }
+
+/* スワイパーコンテナにタッチアクションを追加して垂直スクロールを抑制 */
+.swiper-container {
+    touch-action: pan-y; /* この要素内では垂直方向のスクロールのみブラウザが処理し、水平方向はJavaScriptに委ねる */
+}
