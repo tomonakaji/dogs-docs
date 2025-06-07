@@ -41,3 +41,11 @@ body {
 .swiper-container {
     touch-action: pan-y; /* この要素内では垂直方向のスクロールのみブラウザが処理し、水平方向はJavaScriptに委ねる */
 }
+
+/* スワイパー内の画像の表示を調整し、見切れを防ぐ */
+.swiper-slide img {
+    max-height: unset !important; /* Tailwindのmax-h-80を上書きし、高さの制限を解除 */
+    height: auto !important;     /* アスペクト比を維持し、高さは自動調整 */
+    object-fit: contain !important; /* 画像全体がコンテナ内に収まるように調整 (切り抜きを防ぐ) */
+    /* width: 100%; はHTMLのw-fullで既に設定されているため、ここでは不要 */
+}
